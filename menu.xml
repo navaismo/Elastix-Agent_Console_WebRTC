@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<menulist>
+		<menuitem menuid="agent_console_webrtc" desc="WebRTC Agent Console" parent="call_center" module="yes" link="" order="9">
+		</menuitem>
+	</menulist>
+</module>
+

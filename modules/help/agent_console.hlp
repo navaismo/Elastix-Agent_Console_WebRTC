@@ -1,0 +1,34 @@
+<html>
+<header>
+  <link rel="stylesheet" href="/themes/{$THEMENAME}/styles.css">
+  <link rel="stylesheet" href="/themes/{$THEMENAME}/help.css">
+</header>
+<body>
+
+<h1>{$node_name}</h1>
+
+<p align="Justify">
+La opción Agente Consola nos proporcionará realizar una
+campaña vigente (realización de encuestas a números
+telefónicos predeterminados), por parte de un agente del
+call center activo. También permitirá receptar llamadas
+de números telefónicos que ingresen por la cola
+especificada en la opción llamadas entrantes.
+Para ingresar a Agente Consola, se deberá ingresar el
+número de agente que se haya asignado y la respectiva
+extensión a utilizar para la realización de la campaña, se
+podrá recolectar datos por medio de los formularios.
+Es de suma importancia que un agente recuerde CERRAR
+SESIÓN al terminar su jornada en el call center, debido a
+el monitoreo de la duración de la sesión del agente
+realizando una campaña, para evitar alteraciones en los
+reportes.
+</p>
+
+
+<div><img src="../modules/{$node_id}/images/agent_console.jpg" border="0"></div>
+<div>Figura 1</div><br/>
+
+
+</body>
+</html>
