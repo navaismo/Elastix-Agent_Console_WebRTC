@@ -1,13 +1,22 @@
 /*
+CHANGELOG:
+------
+
 Edited on 2014-03-30
 by navaismo@gmail.com
 
-CHANGELOG:
 Added Handling to CANCEL SIP Message
 Added latest Version of SIPML5
 Added SVN to the URL
-*/     
+------
 
+Edited on 2014-05-15
+by navaismo@gmail.com
+
+Added feature request for MUTE Microphone
+------
+
+*/     
 	//Variables
 	var mySipStack;
         var mycallSession;
@@ -529,6 +538,51 @@ Added SVN to the URL
 		 }
 
         }
+
+/**************** mute from https://code.google.com/p/sipml5/issues/detail?id=67 ********************************/
+function muteMicrophone(bEnabled) {
+	var invbEnabled;
+	if(bEnabled){
+		invbEnabled=false;
+	}else{
+		invbEnabled=true;
+		
+	}
+
+
+
+    console.log("-->>>> muteMicrophone=" + invbEnabled);
+    if (mycallSession != null) {
+         console.log("-->>>> muteMicrophone-> mycallSession is valid");
+        if (mycallSession.o_session != null) {
+            console.log("-->>>> muteMicrophone-> mycallSession.o_session is valid");
+            if (mycallSession.o_session.o_stream_local != null) {
+                console.log("-->>>> muteMicrophone-> mycallSession.o_session.o_stream_local is valid");
+                if (mycallSession.o_session.o_stream_local.getAudioTracks().length > 0) {
+                    console.log("-->>>> muteMicrophone-> mycallSession.o_session.o_stream_local->Audio Tracks Greater than 0");
+                    for (var nTrack = 0; nTrack < mycallSession.o_session.o_stream_local.getAudioTracks().length ; nTrack++) {
+                      console.log("-->>>> muteMicrophone-> Setting Audio Tracks [" + nTrack + "] to state = " + invbEnabled);
+                        mycallSession.o_session.o_stream_local.getAudioTracks()[nTrack].enabled = invbEnabled;
+                    }
+                }
+                else {
+                    console.log("-->>>> muteMicrophone-> mycallSession.o_session.o_stream_local-> NO AUDIO TRACKS");
+                }
+            }
+            else {
+                console.log("-->>>> muteMicrophone-> mycallSession.o_session.o_stream_local is NULL");
+            }
+        }
+        else {
+            console.log("-->>>> muteMicrophone-> mycallSession.o_session is NULL");
+        }
+    }
+    else {
+        console.log("-->>>> muteMicrophone-> mycallSession  is NULL");
+    }
+}
+
+
 
 
 
