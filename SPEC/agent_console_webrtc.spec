@@ -2,10 +2,10 @@
 Summary: Elastix Module agent_console_webrtc
 Name: elastix-%{modname}
 Version: 0.1
-Release: 3
+Release: 4
 License: GPLv3
 Group: Applications/System
-Source0: elastix-agent_console_webrtc-0.1.tar.gz
+Source0: elastix-agent_console_webrtc-0.1.4.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildArch: noarch
 Prereq: screen perl-WWW-Curl elastix-callcenter libtool >= 2.4.2-DMv1 libsrtp >= 1.4.5-DMv1  yasm >= 1.2.0-DMv1 libvpx >= 1.2.0-DMv1 x264 >= snapshot20130810.2245-DMv1 ffmpeg >= 1.2-DMv1 doubango >= 2.0r95 webrtc2sip >= 2.4.5r114-DMv1
