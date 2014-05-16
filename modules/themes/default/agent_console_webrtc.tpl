@@ -94,7 +94,7 @@
         <br><br><audio id='audio_remote'></audio>
 	<div align=center>
 	<input type="text" style="width: 80%" id="callnumber" />
-        <span class="label label-inverse" id="mysipstatus" style="font-size: 8px">Browser Not Supported</span><br>
+        <span class="label label-inverse" id="mysipstatus" style="font-size: 9px">Browser Not Supported</span><br>
 	</div>
                                	<table style="width: 75%; height: 75%" align='center'>
                                     <tr><td><input type="button" style="width: 33%" class="btn-primary" value="1"
@@ -114,7 +114,9 @@ type="button" style="width: 33%" class="btn-primary" value="#" onclick="sipSendD
 	<div align="center">
 	        <button class="btn btn-success" id="btnCall" onclick="call()" >Call</button>
 	        <button  class="btn btn-danger " id="btnHangUp" onclick="hangup()" >Hangup</button><br>
-	        <span class="label" id="mycallstatus"  style="font-size: 8px"></span>
+		<span class="label"  style="font-size: 10px">Mute/unMute</span>&nbsp;<input type="checkbox" onchange="muteMicrophone(this.checked);"/>
+		<br>
+	        <span class="label" id="mycallstatus"  style="font-size: 10px"></span>
 	</div><br>
 
 
